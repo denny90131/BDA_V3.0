@@ -288,5 +288,13 @@ namespace BDA_V3._0
         {
             mSelectedPage = ePage.chart;
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            for (int i = 0; i <= clsGlobe.fileNum - 1; i++)
+            {
+                clsGlobe._book._ListWorkbook[i].Close();
+            }
+        }
     }
 }
